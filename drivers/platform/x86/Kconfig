@@ -1004,6 +1004,13 @@ config INTEL_PMC_IPC
 	The PMC is an ARC processor which defines IPC commands for communication
 	with other entities in the CPU.
 
+config SURFACE3_POWER
+	tristate "Surface 3 power management driver"
+	depends on I2C && GPIOLIB && ACPI
+	---help---
+	  This driver provides support for the power supply features of
+	  the Surface 3 tablet.
+
 config SURFACE_PRO3_BUTTON
 	tristate "Power/home/volume buttons driver for Microsoft Surface Pro 3/4 tablet"
 	depends on ACPI && INPUT
